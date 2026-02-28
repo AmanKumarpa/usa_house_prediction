@@ -506,7 +506,7 @@ text-align:eft;
 font-size:40px;
 font-weight:400;
 color:#38bdf8;
-margin:10px auto 30px auto;
+margin:30px auto 30px auto;
 margin-top: 30px;
 padding:0;
 ">
