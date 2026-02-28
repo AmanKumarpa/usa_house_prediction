@@ -428,7 +428,7 @@ components.html("""
     <h2 style="
         font-size:40px;
         font-weight:500;
-        c0lor:#38bdf8;
+        color:#38bdf8;
         margin-bottom:40px;
     ">
         About This Project
