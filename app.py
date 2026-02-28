@@ -472,7 +472,7 @@ components.html("""
 
     </div>
 </div>
-""", height=450)
+""", height=600)
 # ================= INSIGHTS =================
 st.markdown('<div id="insights" class="section section-dark">', unsafe_allow_html=True)
 
