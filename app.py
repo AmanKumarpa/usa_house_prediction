@@ -405,23 +405,7 @@ label {
 """, unsafe_allow_html=True)
 # ================= NAVBAR =================
 # ================= NAVBAR =================
-navbar_html = """
-<div class="navbar">
-    <div class="logo">🏠 House Predictor</div>
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-    <div class="nav-links">
-        <a href="#">About</a>
-        <a href="#insights">Insights</a>
-        <a href="#predict">Prediction Model</a>
-        <a href="#contact">Contact</a>
-    </div>
-</div>
-"""
-
-st.markdown(navbar_html, unsafe_allow_html=True)
 
 
 # ================= HERO =================
