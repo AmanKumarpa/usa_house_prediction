@@ -51,13 +51,13 @@ header, footer {visibility: hidden;}
     padding: 0 !important;
 }
 .navbar {
-    position: fixed;
+  
     top: 0;
     width: 100%;
 }
 
 .navbar {
-    position: fixed;
+   
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -92,47 +92,7 @@ header, footer {visibility: hidden;}
     color: #38bdf8;
 }
 
-/* ================= HAMBURGER MENU ================= */
 
-/* ================= HAMBURGER CSS (NO JS) ================= */
-
-#menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #0b1120;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px 0;
-    }
-
-    #menu-toggle:checked ~ .nav-links {
-        display: flex;
-    }
-
-    .nav-links a {
-        margin: 10px 20px;
-    }
-}
 
 /* ================= HERO WITH BG IMAGE ================= */
 
@@ -407,28 +367,46 @@ label {
 # ================= NAVBAR =================
 
 # ================= NAVBAR =================
+# ================= NAVBAR =================
 
 st.markdown("""
-<div style="
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(11,17,32,0.95);
-padding:15px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
-">
-    <div style="color:white;font-size:20px;font-weight:700;">
-        🏠 House Predictor
-    </div>
+<style>
+.top-nav {
+    width: 100%;
+    background: rgba(11,17,32,0.95);
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(56,189,248,0.2);
+    margin-bottom: 30px;
+}
 
+.top-nav .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.top-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #38bdf8;
+}
+</style>
+
+<div class="top-nav">
+    <div class="logo">🏠 House Predictor</div>
     <div>
-        <a href="#insights" style="color:#cbd5e1;margin-right:25px;text-decoration:none;">Insights</a>
-        <a href="#predict" style="color:#cbd5e1;margin-right:25px;text-decoration:none;">Prediction</a>
-        <a href="#contact" style="color:#cbd5e1;text-decoration:none;">Contact</a>
+        <a href="#insights">Insights</a>
+        <a href="#predict">Prediction</a>
+        <a href="#contact">Contact</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
