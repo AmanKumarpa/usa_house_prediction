@@ -280,6 +280,7 @@ header, footer {visibility: hidden;}
     border: 1px solid #38bdf8;
 }
 
+
 /* Prediction */
 
 
@@ -400,25 +401,18 @@ label {
         font-size: 28px !important;
     }
 }
-
-/* Hamburger open state */
-.nav-links.open {
-    display: flex !important;
-}
-</style>""", unsafe_allow_html=True)
-
+</style>
+""", unsafe_allow_html=True)
 # ================= NAVBAR =================
 st.markdown("""
 <div class="navbar">
 
     <div class="logo">🏠 House Predictor</div>
 
-    <div class="menu-icon" onclick="
-        var links = document.getElementById('navLinks');
-        links.classList.toggle('open');
-    ">☰</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links">
         <a href="#">About</a>
         <a href="#insights">Insights</a>
         <a href="#predict">Prediction Model</a>
@@ -487,29 +481,40 @@ col1, col2, col3 = st.columns(3)
 with col1:
     longitude = st.number_input("Longitude", value=-122.23)
     housing_median_age = st.slider("Housing Median Age", 1, 100, 41)
+    total_bedrooms = st.number_input("Total Bedrooms", value=129)
 
 with col2:
     latitude = st.number_input("Latitude", value=37.88)
     total_rooms = st.number_input("Total Rooms", value=880)
+    households = st.number_input("Households", value=126)
 
 with col3:
     population = st.number_input("Population", value=322)
     median_income = st.number_input("Median Income", value=8.32)
+    ocean_proximity = st.selectbox(
+        "Ocean Proximity",
+        options=["<1H OCEAN", "INLAND", "ISLAND", "NEAR BAY", "NEAR OCEAN"],
+        index=3
+    )
 
 if st.button("Predict Price"):
-    input_data = pd.DataFrame([[ 
-        longitude, latitude, housing_median_age,
-        total_rooms, 0,
-        population, 0,
-        median_income, "INLAND"
-    ]], columns=[
-        "longitude","latitude","housing_median_age","total_rooms",
-        "total_bedrooms","population","households",
-        "median_income","ocean_proximity"
-    ])
+    try:
+        input_data = pd.DataFrame([{
+            "longitude": longitude,
+            "latitude": latitude,
+            "housing_median_age": housing_median_age,
+            "total_rooms": total_rooms,
+            "total_bedrooms": total_bedrooms,
+            "population": population,
+            "households": households,
+            "median_income": median_income,
+            "ocean_proximity": ocean_proximity
+        }])
 
-    prediction = model.predict(input_data)[0]
-    st.markdown(f'<div class="result-card">Predicted Price: ${prediction:,.2f}</div>', unsafe_allow_html=True)
+        prediction = model.predict(input_data)[0]
+        st.markdown(f'<div class="result-card">Predicted Price: ${prediction:,.2f}</div>', unsafe_allow_html=True)
+    except Exception as e:
+        st.error(f"❌ Prediction failed: {e}")
 
 # ================= CONTACT =================
 st.markdown('<div id="contact" class="section section-dark">', unsafe_allow_html=True)
