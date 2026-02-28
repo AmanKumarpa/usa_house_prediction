@@ -122,14 +122,15 @@ header, footer {visibility: hidden;}
 
 .hero-overlay {
     position: relative;
-    text-align: center;
-    color: white;
-    padding: 00px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: 80px;
 }
 
 .hero-overlay h1 {
-    font-size: 60px;
+    font-size: 58px;
     font-weight: 800;
+    line-height: 1.2;
 }
 
 
@@ -438,12 +439,15 @@ components.html("""
         max-width:900px;
         margin:auto;
         background:linear-gradient(145deg,#1e293b,#111827);
-        padding:50px;
+      padding:60px 60px;
+      margin-top:-40px;
         border-radius:20px;
         border:1px solid rgba(56,189,248,0.2);
         color:#d1d5db;
         font-size:18px;
         line-height:1.8;
+        text-align = Left
+    
     ">
         This project uses Machine Learning to predict house prices
         based on geographical and socio-economic factors.
