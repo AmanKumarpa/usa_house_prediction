@@ -364,10 +364,7 @@ label {
 </style>
 """, unsafe_allow_html=True)
 # ================= NAVBAR =================
-# ================= NAVBAR =================
-
-# ================= NAVBAR =================
-# ================= NAVBAR =================
+## ================= NAVBAR =================
 
 st.markdown("""
 <style>
@@ -404,6 +401,8 @@ st.markdown("""
 <div class="top-nav">
     <div class="logo">🏠 House Predictor</div>
     <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#insights">Insights</a>
         <a href="#predict">Prediction</a>
         <a href="#contact">Contact</a>
@@ -411,13 +410,51 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ================= HERO =================
+# ================= HOME =================
 st.markdown("""
-<div class="hero">
+<div id="home" class="hero">
     <div class="hero-overlay">
         <h1>USA House Price Prediction</h1>
         <p>AI-powered real estate valuation system using machine learning</p>
         <a href="#predict" class="hero-btn">Start Prediction</a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+# ================= ABOUT =================
+st.markdown("""
+<div id="about" style="padding:100px 60px; text-align:center;">
+    <h2 style="
+        font-size:46px;
+        font-weight:800;
+        background: linear-gradient(90deg,#38bdf8,#0ea5e9);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom:40px;
+    ">
+        About This Project
+    </h2>
+
+    <div style="
+        max-width:900px;
+        margin:auto;
+        background:linear-gradient(145deg,#1e293b,#111827);
+        padding:50px;
+        border-radius:20px;
+        border:1px solid rgba(56,189,248,0.2);
+        color:#d1d5db;
+        font-size:18px;
+        line-height:1.8;
+    ">
+        This project uses Machine Learning to predict house prices
+        based on geographical and socio-economic factors.
+        <br><br>
+        Built with Python, Scikit-learn, and deployed as an interactive
+        web application, it demonstrates a complete ML workflow —
+        from data preprocessing to model deployment.
+        <br><br>
+        ⚡ Real-Time Predictions <br>
+        📊 Data-Driven Insights <br>
+        🤖 ML-Powered Intelligence
     </div>
 </div>
 """, unsafe_allow_html=True)
