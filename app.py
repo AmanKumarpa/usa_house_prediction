@@ -421,14 +421,13 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 # ================= ABOUT =================
-st.markdown("""
+st.markdown(
+"""
 <div id="about" style="padding:100px 60px; text-align:center;">
     <h2 style="
         font-size:46px;
         font-weight:800;
-        background: linear-gradient(90deg,#38bdf8,#0ea5e9);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
+        color:#38bdf8;
         margin-bottom:40px;
     ">
         About This Project
@@ -447,17 +446,23 @@ st.markdown("""
     ">
         This project uses Machine Learning to predict house prices
         based on geographical and socio-economic factors.
+
         <br><br>
+
         Built with Python, Scikit-learn, and deployed as an interactive
         web application, it demonstrates a complete ML workflow —
         from data preprocessing to model deployment.
+
         <br><br>
-        ⚡ Real-Time Predictions <br>
-        📊 Data-Driven Insights <br>
+
+        ⚡ Real-Time Predictions<br>
+        📊 Data-Driven Insights<br>
         🤖 ML-Powered Intelligence
     </div>
 </div>
-""", unsafe_allow_html=True)
+""",
+unsafe_allow_html=True
+)
 # ================= INSIGHTS =================
 st.markdown('<div id="insights" class="section section-dark">', unsafe_allow_html=True)
 
