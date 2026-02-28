@@ -404,9 +404,8 @@ label {
 </style>
 """, unsafe_allow_html=True)
 # ================= NAVBAR =================
-st.markdown("""
+navbar_html = """
 <div class="navbar">
-
     <div class="logo">🏠 House Predictor</div>
 
     <input type="checkbox" id="menu-toggle">
@@ -418,9 +417,10 @@ st.markdown("""
         <a href="#predict">Prediction Model</a>
         <a href="#contact">Contact</a>
     </div>
-
 </div>
-""", unsafe_allow_html=True)
+"""
+
+st.markdown(navbar_html, unsafe_allow_html=True)
 
 
 # ================= HERO =================
