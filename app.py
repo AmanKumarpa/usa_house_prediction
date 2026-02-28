@@ -404,6 +404,7 @@ label {
 </style>
 """, unsafe_allow_html=True)
 # ================= NAVBAR =================
+# ================= NAVBAR =================
 navbar_html = """
 <div class="navbar">
     <div class="logo">🏠 House Predictor</div>
