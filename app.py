@@ -422,9 +422,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 import streamlit.components.v1 as components
 
-# ================= ABOUT =================
 components.html("""
-<div style="padding:100px 60px; text-align:center; background:#0b1120;">
+<div style="padding:60px 60px; text-align:left; background:#0b1120;">
+
     <h2 style="
         font-size:46px;
         font-weight:800;
@@ -437,16 +437,23 @@ components.html("""
     <div style="
         max-width:900px;
         margin:auto;
-        background:linear-gradient(145deg,#1e293b,#111827);
+        background:rgba(30,41,59,0.6);
+        backdrop-filter: blur(15px);
         padding:50px;
         border-radius:20px;
-        border:1px solid rgba(56,189,248,0.2);
+        border:1px solid rgba(56,189,248,0.3);
         color:#d1d5db;
         font-size:18px;
         line-height:1.8;
-        text-align = Left
-        
-    ">
+        transition: all 0.4s ease;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    "
+    onmouseover="this.style.transform='translateY(-10px)'; 
+                 this.style.boxShadow='0 30px 60px rgba(56,189,248,0.4)';"
+    onmouseout="this.style.transform='translateY(0px)';
+                this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)';"
+    >
+
         This project uses Machine Learning to predict house prices
         based on geographical and socio-economic factors.
 
@@ -461,6 +468,7 @@ components.html("""
         ⚡ Real-Time Predictions<br>
         📊 Data-Driven Insights<br>
         🤖 ML-Powered Intelligence
+
     </div>
 </div>
 """, height=600)
@@ -493,7 +501,7 @@ Market Insights
 # ================= PREDICTION =================
 st.markdown("""
 <h2 style="
-text-align:left;
+text-align:eft;
 font-size:40px;
 font-weight:400;
 color:#38bdf8;
