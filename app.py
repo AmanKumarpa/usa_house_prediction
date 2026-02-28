@@ -169,9 +169,7 @@ header, footer {visibility: hidden;}
 /* ================= SECTIONS ================= */
 
 
-.section {
-    padding: 60px 60px;
-}
+
 
 .section h2 {
     text-align: center;
