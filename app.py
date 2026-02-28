@@ -420,10 +420,11 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+import streamlit.components.v1 as components
+
 # ================= ABOUT =================
-st.markdown(
-"""
-<div id="about" style="padding:100px 60px; text-align:center;">
+components.html("""
+<div style="padding:100px 60px; text-align:center; background:#0b1120;">
     <h2 style="
         font-size:46px;
         font-weight:800;
@@ -460,9 +461,7 @@ st.markdown(
         🤖 ML-Powered Intelligence
     </div>
 </div>
-""",
-unsafe_allow_html=True
-)
+""", height=600)
 # ================= INSIGHTS =================
 st.markdown('<div id="insights" class="section section-dark">', unsafe_allow_html=True)
 
