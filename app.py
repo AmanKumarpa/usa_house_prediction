@@ -169,6 +169,9 @@ header, footer {visibility: hidden;}
 /* ================= SECTIONS ================= */
 
 
+.section {
+    padding: 60px 60px;
+}
 
 .section h2 {
     text-align: center;
@@ -471,7 +474,7 @@ components.html("""
 
     </div>
 </div>
-""", height=600)
+""", height=450)
 # ================= INSIGHTS =================
 st.markdown('<div id="insights" class="section section-dark">', unsafe_allow_html=True)
 
