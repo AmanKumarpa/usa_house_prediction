@@ -406,7 +406,32 @@ label {
 # ================= NAVBAR =================
 # ================= NAVBAR =================
 
+# ================= NAVBAR =================
 
+st.markdown("""
+<div style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(11,17,32,0.95);
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+">
+    <div style="color:white;font-size:20px;font-weight:700;">
+        🏠 House Predictor
+    </div>
+
+    <div>
+        <a href="#insights" style="color:#cbd5e1;margin-right:25px;text-decoration:none;">Insights</a>
+        <a href="#predict" style="color:#cbd5e1;margin-right:25px;text-decoration:none;">Prediction</a>
+        <a href="#contact" style="color:#cbd5e1;text-decoration:none;">Contact</a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # ================= HERO =================
 st.markdown("""
