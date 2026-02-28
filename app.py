@@ -426,9 +426,9 @@ components.html("""
 <div style="padding:60px 60px; text-align:left; background:#0b1120;">
 
     <h2 style="
-        font-size:46px;
-        font-weight:800;
-        color:#38bdf8;
+        font-size:40px;
+        font-weight:500;
+        c0lor:#38bdf8;
         margin-bottom:40px;
     ">
         About This Project
