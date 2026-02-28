@@ -460,9 +460,7 @@ components.html("""
 
         <br><br>
 
-        Built with Python, Scikit-learn, and deployed as an interactive
-        web application, it demonstrates a complete ML workflow —
-        from data preprocessing to model deployment.
+      Our website stands out because it uses Machine Learning to provide instant, data-driven, and unbiased house price predictions with a modern user-friendly interface — helping sellers make smarter pricing decisions.
 
         <br><br>
 
