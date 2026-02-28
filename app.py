@@ -423,7 +423,7 @@ st.markdown("""
 import streamlit.components.v1 as components
 
 components.html("""
-<div style="padding:60px 60px; text-align:left; background:#0b1120;">
+<div style="padding:60px 60px; text-align:left; background:#38bdf8;">
 
     <h2 style="
         font-size:40px;
